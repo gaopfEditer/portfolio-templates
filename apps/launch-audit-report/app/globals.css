@@ -1,0 +1,49 @@
+@import "@portfolio/ui/styles.css";
+
+.audit-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 0 1.5rem;
+}
+
+.warning-panel {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+  padding: 1rem;
+  border-radius: var(--pt-radius);
+  margin-bottom: 1rem;
+}
+
+.ok-panel {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+  padding: 1rem;
+  border-radius: var(--pt-radius);
+  margin-bottom: 1rem;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.checklist li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--pt-border);
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .pt-body {
+    background: #fff;
+  }
+}

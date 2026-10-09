@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-templates",
+  "private": true,
+  "description": "Portfolio demo templates monorepo for gaopfEditer — T1–T4",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "dev:landing-waitlist": "npm run dev -w landing-waitlist",
+    "dev:form-to-sheet": "npm run dev -w form-to-sheet",
+    "dev:booking-calendar": "npm run dev -w booking-calendar",
+    "dev:launch-audit-report": "npm run dev -w launch-audit-report",
+    "lint": "npm run lint --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "playwright": "^1.64.0"
+  }
+}

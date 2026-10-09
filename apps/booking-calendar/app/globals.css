@@ -1,0 +1,56 @@
+@import "@portfolio/ui/styles.css";
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  overflow-x: auto;
+}
+
+.day-col {
+  min-width: 7rem;
+}
+
+.day-label {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  text-align: center;
+  padding: 0.5rem;
+  background: var(--pt-surface);
+  border: 1px solid var(--pt-border);
+  border-radius: var(--pt-radius) var(--pt-radius) 0 0;
+}
+
+.slot-btn {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.25rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  border: 1px solid var(--pt-border);
+  border-radius: 0.25rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.slot-btn:hover:not(:disabled) {
+  border-color: var(--pt-accent);
+  color: var(--pt-accent);
+}
+
+.slot-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.slot-btn.selected {
+  background: var(--pt-accent);
+  color: #fff;
+  border-color: var(--pt-accent);
+}
+
+@media (max-width: 720px) {
+  .calendar-grid {
+    grid-template-columns: repeat(5, minmax(5.5rem, 1fr));
+  }
+}
